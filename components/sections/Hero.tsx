@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
-import { ArrowRight, Download } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import AnimatedSection from "@/components/animated-section"
+import { ArrowRight, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import AnimatedSection from "@/components/animated-section";
 
 interface HeroProps {
-  scrollToSection: (sectionId: string) => void
+  scrollToSection: (sectionId: string) => void;
 }
 
 export default function Hero({ scrollToSection }: HeroProps) {
   return (
-    <section id="home" className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10">
+    <section
+      id="home"
+      className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10"
+    >
       <AnimatedSection className="flex-1 space-y-6">
         <motion.h1
           className="text-4xl md:text-6xl font-bold leading-tight"
@@ -32,7 +35,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
               stiffness: 100,
             }}
           >
-            Your Name
+            Malhar Dhopate
           </motion.span>
         </motion.h1>
 
@@ -42,7 +45,8 @@ export default function Hero({ scrollToSection }: HeroProps) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Transforming complex data into meaningful insights and impactful solutions.
+          Transforming complex data into meaningful insights and impactful
+          solutions.
         </motion.p>
 
         <motion.div
@@ -51,7 +55,10 @@ export default function Hero({ scrollToSection }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Button className="bg-emerald-500 hover:bg-emerald-600" onClick={() => scrollToSection("projects")}>
+          <Button
+            className="bg-emerald-500 hover:bg-emerald-600"
+            onClick={() => scrollToSection("projects")}
+          >
             View Projects <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <a href="/assets/resume.pdf" download="YourName_Resume.pdf">
@@ -74,10 +81,14 @@ export default function Hero({ scrollToSection }: HeroProps) {
             stiffness: 100,
           }}
         >
-          <Image src="/assets/images/profile.jpg" alt="Profile" fill className="object-cover" />
+          <Image
+            src="/assets/images/profile.jpg"
+            alt="Profile"
+            fill
+            className="object-cover"
+          />
         </motion.div>
       </AnimatedSection>
     </section>
-  )
+  );
 }
-
