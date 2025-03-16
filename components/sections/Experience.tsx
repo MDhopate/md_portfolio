@@ -88,7 +88,7 @@ export default function Experience() {
                     <h4 className="text-lg text-slate-200 mb-3">
                       Nationwide Automotive Services
                     </h4>
-                    <ul className="list-disc list-inside text-slate-300 space-y-2">
+                    <ul className="list-disc md:list-none list-inside text-slate-300 space-y-2">
                       <li>
                         Optimized billing by implementing VBA automation,
                         boosting efficiency by 35% & cutting billing time by
