@@ -35,7 +35,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
               stiffness: 100,
             }}
           >
-            Malhar Dhopate
+            Malhar!
           </motion.span>
         </motion.h1>
 

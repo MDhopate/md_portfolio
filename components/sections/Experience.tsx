@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Badge } from "@/components/ui/badge"
-import AnimatedSection from "@/components/animated-section"
+import { Badge } from "@/components/ui/badge";
+import AnimatedSection from "@/components/animated-section";
 
 export default function Experience() {
   return (
@@ -33,44 +33,80 @@ export default function Experience() {
                   <div className="md:hidden absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
                   <div className="bg-slate-700 rounded-lg p-5 shadow-lg md:ml-0 ml-12">
                     <div className="flex flex-col mb-2">
-                      <h3 className="text-xl font-bold text-emerald-400">Data Science Intern</h3>
+                      <h3 className="text-xl font-bold text-emerald-400">
+                        Gen AI/NLP Research Assistant
+                      </h3>
                       <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                        Jan 2023 - Jun 2023
+                        May 2024 - May 2025
                       </Badge>
                     </div>
-                    <h4 className="text-lg text-slate-200 mb-3">Company Name</h4>
+                    <h4 className="text-lg text-slate-200 mb-3">
+                      IU College of Arts and Sciences
+                    </h4>
                     <ul className="list-disc md:list-none list-inside text-slate-300 space-y-2">
                       <li>
-                        Developed predictive models using machine learning algorithms to forecast customer behavior
+                        Designed an AI Assistant, using Retrieval Augmented
+                        Generation(RAG) and GPT-4o for natural language
+                        processing and response generation, and Speech
+                        Recognition for voice input handling.
                       </li>
-                      <li>Performed data cleaning and preprocessing on large datasets</li>
-                      <li>Created interactive dashboards to visualize key business metrics</li>
-                      <li>Collaborated with cross-functional teams to implement data-driven solutions</li>
+                      <li>
+                        Created a modular NLP pipeline that reduced latency by
+                        20% & improved response accuracy by 30%.
+                      </li>
+                      <li>
+                        Automated audio transcription with embeddings, improving
+                        speech recognition accuracy by 15%.
+                      </li>
+                      <li>
+                        Implemented real-time inactivity monitoring to reduce
+                        idle session errors by 80%.
+                      </li>
                     </ul>
                   </div>
                 </AnimatedSection>
-                <div className="hidden md:block"></div> {/* Empty space for right side */}
+                <div className="hidden md:block"></div>{" "}
+                {/* Empty space for right side */}
               </div>
 
               {/* Experience Item 2 - Right */}
               <div className="relative md:grid md:grid-cols-2 md:gap-8 md:items-center">
-                <div className="hidden md:block"></div> {/* Empty space for left side */}
+                <div className="hidden md:block"></div>{" "}
+                {/* Empty space for left side */}
                 <AnimatedSection delay={0.2} className="md:pl-10">
                   <div className="hidden md:block absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
                   <div className="md:hidden absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
                   <div className="bg-slate-700 rounded-lg p-5 shadow-lg md:ml-0 ml-12">
                     <div className="flex flex-col mb-2">
-                      <h3 className="text-xl font-bold text-emerald-400">Research Assistant</h3>
+                      <h3 className="text-xl font-bold text-emerald-400">
+                        Billing Analyst
+                      </h3>
                       <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                        Sep 2022 - Dec 2022
+                        Aug 2021 - Apr 2023
                       </Badge>
                     </div>
-                    <h4 className="text-lg text-slate-200 mb-3">University Research Lab</h4>
+                    <h4 className="text-lg text-slate-200 mb-3">
+                      Nationwide Automotive Services
+                    </h4>
                     <ul className="list-disc list-inside text-slate-300 space-y-2">
-                      <li>Assisted in research projects focused on natural language processing</li>
-                      <li>Implemented deep learning models for text classification and sentiment analysis</li>
-                      <li>Conducted literature reviews and contributed to research papers</li>
-                      <li>Presented findings at departmental seminars</li>
+                      <li>
+                        Optimized billing by implementing VBA automation,
+                        boosting efficiency by 35% & cutting billing time by
+                        70%.
+                      </li>
+                      <li>
+                        Reduced overdue accounts by $900,000 through
+                        individualized payment plans for clients.
+                      </li>
+                      <li>
+                        Trained & led a 5 people team, resulting in a 50%
+                        improvement in billing & enhancement in customer
+                        relationships.
+                      </li>
+                      <li>
+                        Designed Tableau dashboards for monthly financial
+                        reporting, enabling self-service analytics.
+                      </li>
                     </ul>
                   </div>
                 </AnimatedSection>
@@ -83,51 +119,39 @@ export default function Experience() {
                   <div className="md:hidden absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
                   <div className="bg-slate-700 rounded-lg p-5 shadow-lg md:ml-0 ml-12">
                     <div className="flex flex-col mb-2">
-                      <h3 className="text-xl font-bold text-emerald-400">Teaching Assistant</h3>
+                      <h3 className="text-xl font-bold text-emerald-400">
+                        Data Analyst
+                      </h3>
                       <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                        Jan 2022 - May 2022
+                        Jan 2021 - May 2021
                       </Badge>
                     </div>
-                    <h4 className="text-lg text-slate-200 mb-3">University Name</h4>
+                    <h4 className="text-lg text-slate-200 mb-3">
+                      Lynn University
+                    </h4>
                     <ul className="list-disc md:list-none list-inside text-slate-300 space-y-2">
-                      <li>Assisted professor in teaching Introduction to Data Science course</li>
-                      <li>Conducted weekly lab sessions and office hours</li>
-                      <li>Graded assignments and provided feedback to students</li>
-                      <li>Developed supplementary learning materials</li>
+                      <li>
+                        Built SQL queries & automated data transformation
+                        pipelines, cutting data preparation time by 30%.
+                      </li>
+                      <li>
+                        Created 10+ dashboards tracking enrollment & retention,
+                        improving student retention rates by 10%.
+                      </li>
+                      <li>
+                        Utilized hypothesis testing & trend analysis techniques
+                        to guide policy decisions & resource allocation.
+                      </li>
                     </ul>
                   </div>
                 </AnimatedSection>
-                <div className="hidden md:block"></div> {/* Empty space for right side */}
-              </div>
-
-              {/* Experience Item 4 - Right */}
-              <div className="relative md:grid md:grid-cols-2 md:gap-8 md:items-center">
-                <div className="hidden md:block"></div> {/* Empty space for left side */}
-                <AnimatedSection delay={0.4} className="md:pl-10">
-                  <div className="hidden md:block absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
-                  <div className="md:hidden absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
-                  <div className="bg-slate-700 rounded-lg p-5 shadow-lg md:ml-0 ml-12">
-                    <div className="flex flex-col mb-2">
-                      <h3 className="text-xl font-bold text-emerald-400">Data Analyst Intern</h3>
-                      <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                        May 2021 - Aug 2021
-                      </Badge>
-                    </div>
-                    <h4 className="text-lg text-slate-200 mb-3">Tech Company Inc.</h4>
-                    <ul className="list-disc list-inside text-slate-300 space-y-2">
-                      <li>Analyzed user behavior data to identify patterns and trends</li>
-                      <li>Created automated reports using SQL and Python</li>
-                      <li>Developed dashboards to track key performance indicators</li>
-                      <li>Presented findings to stakeholders and made recommendations</li>
-                    </ul>
-                  </div>
-                </AnimatedSection>
+                <div className="hidden md:block"></div>{" "}
+                {/* Empty space for right side */}
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

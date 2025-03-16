@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import AnimatedSection from "@/components/animated-section"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github } from "lucide-react"
+import AnimatedSection from "@/components/animated-section";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Github } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -13,7 +13,8 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6"></div>
           <p className="text-slate-300 max-w-2xl mx-auto">
-            I'm always open to new opportunities and collaborations. Feel free to reach out!
+            I'm always open to new opportunities and collaborations. Feel free
+            to reach out!
           </p>
         </AnimatedSection>
 
@@ -21,7 +22,9 @@ export default function Contact() {
           <AnimatedSection delay={0.1}>
             <Card className="bg-slate-700 border-slate-600 h-full">
               <CardHeader>
-                <CardTitle className="text-emerald-400">Contact Information</CardTitle>
+                <CardTitle className="text-emerald-400">
+                  Contact Information
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -44,7 +47,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-400">Email</p>
-                    <p className="text-slate-200">your.email@example.com</p>
+                    <p className="text-slate-200">dmalhar.24@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -66,7 +69,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-400">Phone</p>
-                    <p className="text-slate-200">(123) 456-7890</p>
+                    <p className="text-slate-200">+1 (954) 536-4846</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -87,10 +90,10 @@ export default function Contact() {
                       <circle cx="12" cy="10" r="3" />
                     </svg>
                   </div>
-                  <div>
+                  {/* <div>
                     <p className="text-sm text-slate-400">Location</p>
                     <p className="text-slate-200">City, State, Country</p>
-                  </div>
+                  </div> */}
                 </div>
               </CardContent>
             </Card>
@@ -99,13 +102,20 @@ export default function Contact() {
           <AnimatedSection delay={0.2}>
             <Card className="bg-slate-700 border-slate-600 h-full">
               <CardHeader>
-                <CardTitle className="text-emerald-400">Connect With Me</CardTitle>
+                <CardTitle className="text-emerald-400">
+                  Connect With Me
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <Button
                   variant="outline"
                   className="w-full justify-start"
-                  onClick={() => window.open("https://linkedin.com/in/yourusername", "_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/mdhopate/",
+                      "_blank"
+                    )
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +138,9 @@ export default function Contact() {
                 <Button
                   variant="outline"
                   className="w-full justify-start"
-                  onClick={() => window.open("https://github.com/yourusername", "_blank")}
+                  onClick={() =>
+                    window.open("https://github.com/MDhopate", "_blank")
+                  }
                 >
                   <Github className="mr-2 text-emerald-400" />
                   GitHub
@@ -136,7 +148,9 @@ export default function Contact() {
                 <Button
                   variant="outline"
                   className="w-full justify-start"
-                  onClick={() => window.open("https://twitter.com/yourusername", "_blank")}
+                  onClick={() =>
+                    window.open("https://twitter.com/yourusername", "_blank")
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +171,9 @@ export default function Contact() {
                 <Button
                   variant="outline"
                   className="w-full justify-start"
-                  onClick={() => window.open("https://kaggle.com/yourusername", "_blank")}
+                  onClick={() =>
+                    window.open("https://kaggle.com/yourusername", "_blank")
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -183,6 +199,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
