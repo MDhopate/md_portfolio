@@ -36,14 +36,13 @@ export default function Experience() {
                       <h3 className="text-xl font-bold text-emerald-400">
                         Gen AI/NLP Research Assistant
                       </h3>
+                      <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                        May 2024 - May 2025
+                      </Badge>
                     </div>
                     <h4 className="text-lg text-slate-200 mb-3">
                       IU College of Arts and Sciences
                     </h4>
-                    <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                      May 2024 - May 2025
-                    </Badge>
-
                     <ul className="list-disc md:list-none list-inside text-slate-300 space-y-2">
                       <li>
                         Designed an AI Assistant, using Retrieval Augmented
