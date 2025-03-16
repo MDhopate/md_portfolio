@@ -33,7 +33,7 @@ export default function Projects() {
             <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/assets/images/projects/project1.jpg"
+                  src="/assets/images/projects/project1.png"
                   alt="Project 1"
                   fill
                   className="object-cover"
@@ -84,7 +84,7 @@ export default function Projects() {
             <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/assets/images/projects/project1.jpg"
+                  src="/assets/images/projects/project1.png"
                   alt="Project 2"
                   fill
                   className="object-cover"
@@ -135,7 +135,7 @@ export default function Projects() {
             <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/assets/images/projects/project1.jpg"
+                  src="/assets/images/projects/project1.png"
                   alt="Project 3"
                   fill
                   className="object-cover"
@@ -186,7 +186,7 @@ export default function Projects() {
             <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/assets/images/projects/project1.jpg"
+                  src="/assets/images/projects/project1.png"
                   alt="Project 4"
                   fill
                   className="object-cover"
@@ -237,7 +237,7 @@ export default function Projects() {
             <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/assets/images/projects/project1.jpg"
+                  src="/assets/images/projects/project1.png"
                   alt="Project 5"
                   fill
                   className="object-cover"
@@ -288,7 +288,7 @@ export default function Projects() {
             <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/assets/images/projects/project1.jpg"
+                  src="/assets/images/projects/project1.png"
                   alt="Project 6"
                   fill
                   className="object-cover"
