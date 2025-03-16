@@ -2,28 +2,18 @@
 
 import { ArrowRight, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import AnimatedSection from "@/components/animated-section"
-import { useResumeContext } from "@/context/resume-context"
 
 interface HeroProps {
   scrollToSection: (sectionId: string) => void
 }
 
 export default function Hero({ scrollToSection }: HeroProps) {
-  const { resumeFile } = useResumeContext()
-
   return (
     <section id="home" className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10">
       <AnimatedSection className="flex-1 space-y-6">
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-          <Badge className="px-3 py-1 bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20 border-none">
-            Data Science Graduate Student
-          </Badge>
-        </motion.div>
-
         <motion.h1
           className="text-4xl md:text-6xl font-bold leading-tight"
           initial={{ opacity: 0 }}
@@ -64,19 +54,11 @@ export default function Hero({ scrollToSection }: HeroProps) {
           <Button className="bg-emerald-500 hover:bg-emerald-600" onClick={() => scrollToSection("projects")}>
             View Projects <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          {resumeFile ? (
-            <a href={URL.createObjectURL(resumeFile)} download={resumeFile.name || "YourName_Resume.pdf"}>
-              <Button variant="outline" className="border-slate-700">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </Button>
-            </a>
-          ) : (
-            <a href="/sample-resume.pdf" download="YourName_Resume.pdf">
-              <Button variant="outline" className="border-slate-700">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </Button>
-            </a>
-          )}
+          <a href="/assets/resume.pdf" download="YourName_Resume.pdf">
+            <Button variant="outline" className="border-slate-700">
+              <Download className="mr-2 h-4 w-4" /> Download Resume
+            </Button>
+          </a>
         </motion.div>
       </AnimatedSection>
 
@@ -92,7 +74,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             stiffness: 100,
           }}
         >
-          <Image src="/placeholder.svg?height=320&width=320" alt="Profile" fill className="object-cover" />
+          <Image src="/assets/images/profile.jpg" alt="Profile" fill className="object-cover" />
         </motion.div>
       </AnimatedSection>
     </section>

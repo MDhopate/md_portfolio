@@ -1,11 +1,8 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
 import AnimatedSection from "@/components/animated-section"
-import { useResumeContext } from "@/context/resume-context"
 
 export default function About() {
-  const { resumeFile } = useResumeContext()
-
   return (
     <section id="about" className="bg-slate-800/50 py-20">
       <div className="container mx-auto px-4">

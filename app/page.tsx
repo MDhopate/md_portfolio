@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ResumeProvider } from "@/context/resume-context"
 import Header from "@/components/sections/Header"
 import Hero from "@/components/sections/Hero"
 import About from "@/components/sections/About"
@@ -10,7 +9,6 @@ import Experience from "@/components/sections/Experience"
 import Projects from "@/components/sections/Projects"
 import Contact from "@/components/sections/Contact"
 import Footer from "@/components/sections/Footer"
-import AdminPanel from "@/components/sections/admin-panel"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
@@ -49,19 +47,16 @@ export default function Home() {
   }
 
   return (
-    <ResumeProvider>
-      <main className="min-h-screen bg-slate-900 text-slate-100">
-        <Header activeSection={activeSection} scrollToSection={scrollToSection} />
-        <Hero scrollToSection={scrollToSection} />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-        <Footer />
-        <AdminPanel />
-      </main>
-    </ResumeProvider>
+    <main className="min-h-screen bg-slate-900 text-slate-100">
+      <Header activeSection={activeSection} scrollToSection={scrollToSection} />
+      <Hero scrollToSection={scrollToSection} />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
+      <Footer />
+    </main>
   )
 }
 

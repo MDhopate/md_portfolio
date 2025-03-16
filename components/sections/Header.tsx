@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useResumeContext } from "@/context/resume-context"
 
 interface HeaderProps {
   activeSection: string
@@ -11,8 +10,6 @@ interface HeaderProps {
 }
 
 export default function Header({ activeSection, scrollToSection }: HeaderProps) {
-  const { resumeFile } = useResumeContext()
-
   return (
     <header className="sticky top-0 z-10 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -52,29 +49,14 @@ export default function Header({ activeSection, scrollToSection }: HeaderProps) 
           </button>
         </nav>
         <div className="flex gap-2">
-          {resumeFile ? (
-            <a
-              href={URL.createObjectURL(resumeFile)}
-              download={resumeFile.name || "YourName_Resume.pdf"}
-              className="hidden md:inline-block"
+          <a href="/assets/resume.pdf" download="YourName_Resume.pdf" className="hidden md:inline-block">
+            <Button
+              variant="outline"
+              className="border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white"
             >
-              <Button
-                variant="outline"
-                className="border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white"
-              >
-                <Download className="mr-2 h-4 w-4" /> Resume
-              </Button>
-            </a>
-          ) : (
-            <a href="/sample-resume.pdf" download="YourName_Resume.pdf" className="hidden md:inline-block">
-              <Button
-                variant="outline"
-                className="border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white"
-              >
-                <Download className="mr-2 h-4 w-4" /> Resume
-              </Button>
-            </a>
-          )}
+              <Download className="mr-2 h-4 w-4" /> Resume
+            </Button>
+          </a>
           <Button
             variant="outline"
             className="border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white"
