@@ -225,7 +225,7 @@ export default function Projects() {
                     )}
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full">
+                  <div className="flex flex-wrap gap-2">
                     {project.skills
                       .slice(
                         0,
@@ -236,7 +236,12 @@ export default function Projects() {
                       .map((skill, skillIndex) => (
                         <Badge
                           key={skillIndex}
-                          className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80 h-7 text-xs flex items-center justify-center"
+                          className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80 text-xs py-1 px-2 whitespace-normal break-words"
+                          style={{
+                            minHeight: "28px",
+                            display: "inline-flex",
+                            alignItems: "center",
+                          }}
                         >
                           {skill.name}
                         </Badge>
