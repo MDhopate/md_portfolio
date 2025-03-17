@@ -31,18 +31,18 @@ export default function Experience() {
                 <AnimatedSection delay={0.1} className="md:pr-10">
                   <div className="hidden md:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
                   <div className="md:hidden absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
-                  <div className="bg-slate-700 rounded-lg p-5 shadow-lg md:ml-0 ml-12">
+                  <div className="bg-slate-700 rounded-xl p-5 shadow-lg md:ml-0 ml-12">
                     <div className="flex flex-col mb-2">
                       <h3 className="text-xl font-bold text-emerald-400">
                         Gen AI/NLP Research Assistant
                       </h3>
+                      <h4 className="text-lg text-slate-200 mt-1">
+                        IU College of Arts and Sciences
+                      </h4>
                       <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                         May 2024 - May 2025
                       </Badge>
                     </div>
-                    <h4 className="text-lg text-slate-200 mb-3">
-                      IU College of Arts and Sciences
-                    </h4>
                     <ul className="list-disc md:list-none list-inside text-slate-300 space-y-2">
                       <li>
                         Designed an AI Assistant, using Retrieval Augmented
@@ -76,18 +76,18 @@ export default function Experience() {
                 <AnimatedSection delay={0.2} className="md:pl-10">
                   <div className="hidden md:block absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
                   <div className="md:hidden absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
-                  <div className="bg-slate-700 rounded-lg p-5 shadow-lg md:ml-0 ml-12">
+                  <div className="bg-slate-700 rounded-xl p-5 shadow-lg md:ml-0 ml-12">
                     <div className="flex flex-col mb-2">
                       <h3 className="text-xl font-bold text-emerald-400">
                         Billing Analyst
                       </h3>
+                      <h4 className="text-lg text-slate-200 mt-1">
+                        Nationwide Automotive Services
+                      </h4>
                       <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                         Aug 2021 - Apr 2023
                       </Badge>
                     </div>
-                    <h4 className="text-lg text-slate-200 mb-3">
-                      Nationwide Automotive Services
-                    </h4>
                     <ul className="list-disc md:list-none list-inside text-slate-300 space-y-2">
                       <li>
                         Optimized billing by implementing VBA automation,
@@ -117,18 +117,18 @@ export default function Experience() {
                 <AnimatedSection delay={0.3} className="md:pr-10">
                   <div className="hidden md:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
                   <div className="md:hidden absolute left-6 transform -translate-x-1/2 w-6 h-6 rounded-full bg-emerald-500 border-4 border-slate-900 z-10"></div>
-                  <div className="bg-slate-700 rounded-lg p-5 shadow-lg md:ml-0 ml-12">
+                  <div className="bg-slate-700 rounded-xl p-5 shadow-lg md:ml-0 ml-12">
                     <div className="flex flex-col mb-2">
                       <h3 className="text-xl font-bold text-emerald-400">
                         Data Analyst
                       </h3>
+                      <h4 className="text-lg text-slate-200 mt-1">
+                        Lynn University
+                      </h4>
                       <Badge className="mt-2 w-fit bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                         Jan 2021 - May 2021
                       </Badge>
                     </div>
-                    <h4 className="text-lg text-slate-200 mb-3">
-                      Lynn University
-                    </h4>
                     <ul className="list-disc md:list-none list-inside text-slate-300 space-y-2">
                       <li>
                         Built SQL queries & automated data transformation

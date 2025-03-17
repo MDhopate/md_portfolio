@@ -1,5 +1,7 @@
 "use client";
 
+import { CardFooter } from "@/components/ui/card";
+
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,7 +9,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -30,7 +31,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Project 1 */}
           <AnimatedSection delay={0.1}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
+            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
               <div className="relative h-48">
                 <Image
                   src="/assets/images/projects/project1.png"
@@ -66,12 +67,16 @@ export default function Projects() {
                 </Badge>
               </CardFooter>
               <div className="flex p-4 pt-0 gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 rounded-full"
+                >
                   <Github className="mr-2 h-4 w-4" /> Code
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600"
+                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" /> Demo
                 </Button>
@@ -81,7 +86,7 @@ export default function Projects() {
 
           {/* Project 2 */}
           <AnimatedSection delay={0.2}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
+            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
               <div className="relative h-48">
                 <Image
                   src="/assets/images/projects/project1.png"
@@ -117,12 +122,16 @@ export default function Projects() {
                 </Badge>
               </CardFooter>
               <div className="flex p-4 pt-0 gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 rounded-full"
+                >
                   <Github className="mr-2 h-4 w-4" /> Code
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600"
+                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" /> Demo
                 </Button>
@@ -132,7 +141,7 @@ export default function Projects() {
 
           {/* Project 3 */}
           <AnimatedSection delay={0.3}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
+            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
               <div className="relative h-48">
                 <Image
                   src="/assets/images/projects/project1.png"
@@ -168,12 +177,16 @@ export default function Projects() {
                 </Badge>
               </CardFooter>
               <div className="flex p-4 pt-0 gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 rounded-full"
+                >
                   <Github className="mr-2 h-4 w-4" /> Code
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600"
+                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" /> Demo
                 </Button>
@@ -183,7 +196,7 @@ export default function Projects() {
 
           {/* Project 4 */}
           <AnimatedSection delay={0.4}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
+            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
               <div className="relative h-48">
                 <Image
                   src="/assets/images/projects/project1.png"
@@ -219,12 +232,16 @@ export default function Projects() {
                 </Badge>
               </CardFooter>
               <div className="flex p-4 pt-0 gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 rounded-full"
+                >
                   <Github className="mr-2 h-4 w-4" /> Code
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600"
+                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" /> Demo
                 </Button>
@@ -234,7 +251,7 @@ export default function Projects() {
 
           {/* Project 5 */}
           <AnimatedSection delay={0.5}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
+            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
               <div className="relative h-48">
                 <Image
                   src="/assets/images/projects/project1.png"
@@ -270,12 +287,16 @@ export default function Projects() {
                 </Badge>
               </CardFooter>
               <div className="flex p-4 pt-0 gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 rounded-full"
+                >
                   <Github className="mr-2 h-4 w-4" /> Code
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600"
+                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" /> Demo
                 </Button>
@@ -285,7 +306,7 @@ export default function Projects() {
 
           {/* Project 6 */}
           <AnimatedSection delay={0.6}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden">
+            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
               <div className="relative h-48">
                 <Image
                   src="/assets/images/projects/project1.png"
@@ -321,12 +342,16 @@ export default function Projects() {
                 </Badge>
               </CardFooter>
               <div className="flex p-4 pt-0 gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 rounded-full"
+                >
                   <Github className="mr-2 h-4 w-4" /> Code
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600"
+                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" /> Demo
                 </Button>
