@@ -1,21 +1,172 @@
 "use client";
 
-import { CardFooter } from "@/components/ui/card";
-
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import {
+  ArrowRight,
+  ExternalLink,
+  Github,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import AnimatedSection from "@/components/animated-section";
 import Image from "next/image";
+import { useState } from "react";
+
+// Type for defining a project's skills/technologies
+type Skill = {
+  name: string;
+  color?: string;
+};
+
+// Type for project data
+type Project = {
+  title: string;
+  description: string;
+  content: string;
+  image: string;
+  skills: Skill[];
+  githubUrl?: string;
+  demoUrl?: string;
+};
 
 export default function Projects() {
+  // Define state for expanded skill sections
+  const [expandedSkills, setExpandedSkills] = useState<{
+    [key: number]: boolean;
+  }>({});
+
+  // Toggle expansion of skills section for a particular project
+  const toggleSkillsExpansion = (projectIndex: number) => {
+    setExpandedSkills((prev) => ({
+      ...prev,
+      [projectIndex]: !prev[projectIndex],
+    }));
+  };
+
+  // Project data
+  const projectsData: Project[] = [
+    {
+      title: "NYC's Vegetarian & Vegan Options",
+      description:
+        "Interactive dashboard for exploring plant-based dining in NYC",
+      content:
+        "Developed a web-based dashboard showcasing vegan and vegetarian restaurants in NYC. Collected data via Yelp Fusion API and processed it with Python for analysis and visualization.",
+      image: "/assets/images/projects/nyc-vegan.jpg",
+      skills: [
+        { name: "Python" },
+        { name: "Data Visualization" },
+        { name: "API Integration" },
+        { name: "Data Processing" },
+        { name: "Insight Interpretation" },
+        { name: "GitHub Pages" },
+        { name: "Web Hosting" },
+        { name: "JavaScript" },
+        { name: "HTML/CSS" },
+      ],
+      githubUrl: "https://github.com/MDhopate",
+      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/0",
+    },
+    {
+      title: "Job Quest",
+      description: "A solution for tracking job applications",
+      content:
+        "Developed a web-based app using Flask and SQLite to track and manage job applications. Features include adding/updating job details, visualizations, and resources for interview preparation. Implemented secure user authentication and hosted on Render.",
+      image: "/assets/images/projects/job-quest.jpg",
+      skills: [
+        { name: "Python" },
+        { name: "Flask" },
+        { name: "SQLite" },
+        { name: "Web Development" },
+        { name: "User Authentication" },
+        { name: "Render Hosting" },
+      ],
+      githubUrl: "https://github.com/MDhopate",
+      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar",
+    },
+    {
+      title: "Secure File Transfer",
+      description: "A cloud computing approach for secure file sharing",
+      content:
+        "Developed a cloud-based file-sharing application using React and AWS services to ensure secure file transfer. Leveraged AWS Amplify for user authentication and AWS S3 for encrypted file storage. Features include password-protected sharing, temporary access links, and user-driven encryption.",
+      image: "/assets/images/projects/secure-file-transfer.jpg",
+      skills: [
+        { name: "Cloud Computing" },
+        { name: "Web Development" },
+        { name: "AWS" },
+        { name: "React" },
+        { name: "User Authentication" },
+        { name: "File Management" },
+        { name: "Deployment" },
+        { name: "Collaborative Development" },
+      ],
+      githubUrl: "https://github.com/MDhopate",
+      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar",
+    },
+    {
+      title: "Dimensionality Reduction & Image Classification",
+      description: "Advanced techniques for image data analysis",
+      content:
+        "This project explores dimensionality reduction techniques such as PCA, t-SNE, MDS, and LLE to analyze and visualize image data from a custom dataset of rock-paper-scissors images. It includes clustering using K-Means and Gaussian Mixture Models and training a neural network for image classification.",
+      image: "/assets/images/projects/dimensionality-reduction.jpg",
+      skills: [
+        { name: "Python" },
+        { name: "TensorFlow" },
+        { name: "Neural Networks" },
+        { name: "PCA" },
+        { name: "t-SNE" },
+        { name: "K-Means" },
+        { name: "Gaussian Mixture Models" },
+        { name: "Image Classification" },
+        { name: "Clustering" },
+        { name: "Model Training" },
+      ],
+      githubUrl: "https://github.com/MDhopate",
+      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar",
+    },
+    {
+      title: "AI-Powered Chatbot Assistant",
+      description: "NLP-based conversational agent with RAG capabilities",
+      content:
+        "Developed a conversational AI assistant using GPT-4o and Retrieval Augmented Generation (RAG) to provide accurate, context-aware responses. Implemented vector embeddings for efficient document retrieval and integrated speech recognition for voice input handling.",
+      image: "/assets/images/projects/ai-chatbot.jpg",
+      skills: [
+        { name: "Python" },
+        { name: "NLP" },
+        { name: "LLMs" },
+        { name: "RAG" },
+        { name: "Vector Embeddings" },
+        { name: "Speech Recognition" },
+      ],
+    },
+    {
+      title: "Data Processing Pipeline",
+      description: "Automated ETL workflow for big data",
+      content:
+        "Designed and implemented an end-to-end data processing pipeline for handling large datasets. Automated extraction, transformation, and loading processes to improve data quality and accessibility. Integrated with cloud services for scalable processing.",
+      image: "/assets/images/projects/data-pipeline.jpg",
+      skills: [
+        { name: "Python" },
+        { name: "SQL" },
+        { name: "AWS" },
+        { name: "ETL" },
+        { name: "Data Quality" },
+        { name: "Automation" },
+      ],
+    },
+  ];
+
+  // Maximum number of skills to show before "Show More" button
+  const MAX_VISIBLE_SKILLS = 5;
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
@@ -29,369 +180,115 @@ export default function Projects() {
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Project 1 */}
-          <AnimatedSection delay={0.1}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
-              <div className="relative h-48">
-                <Image
-                  src="/assets/images/projects/project1.png"
-                  alt="Project 1"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-emerald-400">
-                  Exploring NYC’s Vegetarian and Vegan Options
-                </CardTitle>
-                <CardDescription className="text-slate-300">
-                  Interactive dashboard for exploring plant-based dining in NYC
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-slate-300 flex-grow">
-                <p>
-                  Developed a web-based dashboard showcasing vegan and
-                  vegetarian restaurants in NYC. Collected data via Yelp Fusion
-                  API and processed it with Python for analysis and
-                  visualization. Designed charts and filters to explore
-                  restaurant locations, cuisines, and borough demographics.
-                  Hosted on GitHub Pages.
-                </p>
-              </CardContent>
-              <CardFooter className="flex gap-2 border-t border-slate-600 pt-4">
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Python
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Data Visualization
-                </Badge>
+          {projectsData.map((project, index) => (
+            <AnimatedSection key={index} delay={0.1 * ((index % 3) + 1)}>
+              <Card className="bg-slate-700 border-slate-600 h-full flex flex-col rounded-xl">
+                <div className="relative h-48">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    className="object-cover rounded-t-xl"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-emerald-400">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-slate-300">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="text-slate-300 flex-grow">
+                  <p>{project.content}</p>
+                </CardContent>
 
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Matplotlib
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Seaborn
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Plotly
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  D3.js
-                </Badge>
+                {/* Skills section */}
+                <div className="px-6 pb-2 border-t border-slate-600 pt-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-sm font-medium text-slate-300">
+                      Technologies & Skills
+                    </h4>
+                    {project.skills.length > MAX_VISIBLE_SKILLS && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-8 px-2 text-slate-300"
+                        onClick={() => toggleSkillsExpansion(index)}
+                      >
+                        {expandedSkills[index] ? (
+                          <ChevronUp className="h-4 w-4" />
+                        ) : (
+                          <ChevronDown className="h-4 w-4" />
+                        )}
+                      </Button>
+                    )}
+                  </div>
 
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  API Integration
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Data Processing
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Insight Interpretation
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  GitHub Pages
-                </Badge>
-              </CardFooter>
-              <div className="flex p-4 pt-0 gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 rounded-full"
-                >
-                  <Github className="mr-2 h-4 w-4" /> Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                </Button>
-              </div>
-            </Card>
-          </AnimatedSection>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full">
+                    {project.skills
+                      .slice(
+                        0,
+                        expandedSkills[index]
+                          ? project.skills.length
+                          : MAX_VISIBLE_SKILLS
+                      )
+                      .map((skill, skillIndex) => (
+                        <Badge
+                          key={skillIndex}
+                          className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80 h-7 text-xs flex items-center justify-center"
+                        >
+                          {skill.name}
+                        </Badge>
+                      ))}
+                  </div>
 
-          {/* Project 2 */}
-          <AnimatedSection delay={0.2}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
-              <div className="relative h-48">
-                <Image
-                  src="/assets/images/projects/project2.png"
-                  alt="Project 2"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-emerald-400">Job Quest</CardTitle>
-                <CardDescription className="text-slate-300">
-                  A solution for tracking job applications
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-slate-300 flex-grow">
-                <p>
-                  Developed a web-based app using Flask and SQLite to track and
-                  manage job applications. Features include adding/updating job
-                  details, visualizations, and resources for interview
-                  preparation. Implemented secure user authentication and hosted
-                  on Render.
-                </p>
-              </CardContent>
-              <CardFooter className="flex gap-2 border-t border-slate-600 pt-4">
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Python
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  NLTK
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  TensorFlow
-                </Badge>
-              </CardFooter>
-              <div className="flex p-4 pt-0 gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 rounded-full"
-                >
-                  <Github className="mr-2 h-4 w-4" /> Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                </Button>
-              </div>
-            </Card>
-          </AnimatedSection>
+                  {!expandedSkills[index] &&
+                    project.skills.length > MAX_VISIBLE_SKILLS && (
+                      <div className="text-center mt-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-emerald-400 text-xs hover:text-emerald-300"
+                          onClick={() => toggleSkillsExpansion(index)}
+                        >
+                          +{project.skills.length - MAX_VISIBLE_SKILLS} more
+                        </Button>
+                      </div>
+                    )}
+                </div>
 
-          {/* Project 3 */}
-          <AnimatedSection delay={0.3}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
-              <div className="relative h-48">
-                <Image
-                  src="/assets/images/projects/project3.png"
-                  alt="Project 3"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-emerald-400">
-                  Healthcare Data Analysis
-                </CardTitle>
-                <CardDescription className="text-slate-300">
-                  Analyzing patient data to improve healthcare outcomes
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-slate-300 flex-grow">
-                <p>
-                  Analyzed large healthcare datasets to identify patterns in
-                  patient outcomes. Created visualizations and reports that
-                  helped healthcare providers improve care quality.
-                </p>
-              </CardContent>
-              <CardFooter className="flex gap-2 border-t border-slate-600 pt-4">
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  R
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  SQL
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Power BI
-                </Badge>
-              </CardFooter>
-              <div className="flex p-4 pt-0 gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 rounded-full"
-                >
-                  <Github className="mr-2 h-4 w-4" /> Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                </Button>
-              </div>
-            </Card>
-          </AnimatedSection>
-
-          {/* Project 4 */}
-          <AnimatedSection delay={0.4}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
-              <div className="relative h-48">
-                <Image
-                  src="/assets/images/projects/project4.png"
-                  alt="Project 4"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-emerald-400">
-                  Financial Market Predictor
-                </CardTitle>
-                <CardDescription className="text-slate-300">
-                  Time series forecasting for stock market trends
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-slate-300 flex-grow">
-                <p>
-                  Developed a time series model to predict stock market
-                  movements using historical data. Implemented LSTM neural
-                  networks and traditional forecasting methods for comparison.
-                </p>
-              </CardContent>
-              <CardFooter className="flex gap-2 border-t border-slate-600 pt-4">
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Python
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  PyTorch
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Pandas
-                </Badge>
-              </CardFooter>
-              <div className="flex p-4 pt-0 gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 rounded-full"
-                >
-                  <Github className="mr-2 h-4 w-4" /> Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                </Button>
-              </div>
-            </Card>
-          </AnimatedSection>
-
-          {/* Project 5 */}
-          <AnimatedSection delay={0.5}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
-              <div className="relative h-48">
-                <Image
-                  src="/assets/images/projects/project5.png"
-                  alt="Project 5"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-emerald-400">
-                  Image Classification System
-                </CardTitle>
-                <CardDescription className="text-slate-300">
-                  Deep learning model for image recognition
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-slate-300 flex-grow">
-                <p>
-                  Built a convolutional neural network for classifying images
-                  across multiple categories. Achieved 95% accuracy on test data
-                  using transfer learning with pre-trained models.
-                </p>
-              </CardContent>
-              <CardFooter className="flex gap-2 border-t border-slate-600 pt-4">
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Python
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  TensorFlow
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Keras
-                </Badge>
-              </CardFooter>
-              <div className="flex p-4 pt-0 gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 rounded-full"
-                >
-                  <Github className="mr-2 h-4 w-4" /> Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                </Button>
-              </div>
-            </Card>
-          </AnimatedSection>
-
-          {/* Project 6 */}
-          <AnimatedSection delay={0.6}>
-            <Card className="bg-slate-700 border-slate-600 h-full flex flex-col overflow-hidden rounded-xl">
-              <div className="relative h-48">
-                <Image
-                  src="/assets/images/projects/project6.png"
-                  alt="Project 6"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-emerald-400">
-                  Recommendation Engine
-                </CardTitle>
-                <CardDescription className="text-slate-300">
-                  Personalized content recommendation system
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-slate-300 flex-grow">
-                <p>
-                  Created a collaborative filtering algorithm to recommend
-                  products based on user behavior. Implemented both memory-based
-                  and model-based approaches to optimize recommendations.
-                </p>
-              </CardContent>
-              <CardFooter className="flex gap-2 border-t border-slate-600 pt-4">
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Python
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Scikit-learn
-                </Badge>
-                <Badge className="bg-slate-800/80 text-emerald-300 border border-slate-700 hover:bg-slate-700/80">
-                  Spark
-                </Badge>
-              </CardFooter>
-              <div className="flex p-4 pt-0 gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 rounded-full"
-                >
-                  <Github className="mr-2 h-4 w-4" /> Code
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                </Button>
-              </div>
-            </Card>
-          </AnimatedSection>
+                {/* Actions */}
+                <CardFooter className="flex p-4 pt-2 gap-2">
+                  {project.githubUrl && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1 rounded-full"
+                      onClick={() => window.open(project.githubUrl, "_blank")}
+                    >
+                      <Github className="mr-2 h-4 w-4" /> Code
+                    </Button>
+                  )}
+                  {project.demoUrl && (
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-emerald-500 hover:bg-emerald-600 rounded-full"
+                      onClick={() => window.open(project.demoUrl, "_blank")}
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                    </Button>
+                  )}
+                </CardFooter>
+              </Card>
+            </AnimatedSection>
+          ))}
         </div>
 
         <div className="text-center mt-10">
           <Button
-            className="bg-emerald-500 hover:bg-emerald-600"
-            onClick={() =>
-              window.open("https://github.com/yourusername", "_blank")
-            }
+            className="bg-emerald-500 hover:bg-emerald-600 rounded-full"
+            onClick={() => window.open("https://github.com/MDhopate", "_blank")}
           >
             View More Projects <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
