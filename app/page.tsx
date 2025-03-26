@@ -49,13 +49,17 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-900 text-slate-100">
       <Header activeSection={activeSection} scrollToSection={scrollToSection} />
-      <Hero scrollToSection={scrollToSection} />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div className="pt-16">
+        {" "}
+        {/* Add padding to account for fixed header */}
+        <Hero scrollToSection={scrollToSection} />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }
