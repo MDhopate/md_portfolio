@@ -70,6 +70,14 @@ export default function Header({
             Skills
           </button>
           <button
+            onClick={() => scrollToSection("certifications")}
+            className={`hover:text-indigo-400 transition-colors ${
+              activeSection === "certifications" ? "text-indigo-400" : ""
+            }`}
+          >
+            Certifications
+          </button>
+          <button
             onClick={() => scrollToSection("experience")}
             className={`hover:text-indigo-400 transition-colors ${
               activeSection === "experience" ? "text-indigo-400" : ""
@@ -167,6 +175,19 @@ export default function Header({
               }`}
             >
               Skills
+            </button>
+            <button
+              onClick={() => {
+                scrollToSection("certifications");
+                setMobileMenuOpen(false);
+              }}
+              className={`py-2 px-4 rounded-md ${
+                activeSection === "certifications"
+                  ? "bg-indigo-500/10 text-indigo-400"
+                  : ""
+              }`}
+            >
+              Certifications
             </button>
             <button
               onClick={() => {

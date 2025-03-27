@@ -5,6 +5,7 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
+import Certifications from "@/components/sections/Certifications";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
@@ -50,11 +51,10 @@ export default function Home() {
     <main className="min-h-screen bg-slate-900 text-slate-100">
       <Header activeSection={activeSection} scrollToSection={scrollToSection} />
       <div className="pt-16">
-        {" "}
-        {/* Add padding to account for fixed header */}
         <Hero scrollToSection={scrollToSection} />
         <About />
         <Skills />
+        <Certifications />
         <Experience />
         <Projects />
         <Contact />
