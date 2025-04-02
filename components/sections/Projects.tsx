@@ -77,7 +77,7 @@ export default function Projects() {
       description: "Web application for managing job search process",
       content:
         "Developed a web-based app using Flask and SQLite to track and manage job applications. Features include adding/updating job details, visualizations, and resources for interview preparation. Implemented secure user authentication and hosted on Render, overcoming challenges in database integration.",
-      image: "/assets/images/projects/job-quest.jpg",
+      image: "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/ADT-X8pkc5GkXdLmTbzhRmvd5439C6cF1O.png",
       skills: [
         { name: "Python" },
         { name: "Flask" },
