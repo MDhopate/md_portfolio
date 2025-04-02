@@ -59,7 +59,7 @@ export default function Projects() {
         "Interactive dashboard for exploring plant-based dining in NYC",
       content:
         "Developed a web-based dashboard showcasing vegan and vegetarian restaurants in NYC. Collected data via Yelp Fusion API and processed it with Python for analysis and visualization. Designed charts and filters to explore restaurant locations, cuisines, and borough demographics. Hosted on GitHub Pages.",
-      image: "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Data%20Viz-OwX0179IDSDeTJ574Q2RkoDLWfVMGG.png",
+      image: "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Data%20Viz-wRm12pjwBvs4nlBPV9A9F0bShAEj0s.jpg",
       skills: [
         { name: "Python" },
         { name: "Data Visualization" },
