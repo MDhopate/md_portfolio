@@ -21,18 +21,19 @@ export default function Certifications() {
   // Certification data
   const certifications: CertificationItem[] = [
     {
-      name: "Microsoft Certified: Azure Data Scientist Associate",
-      organization: "Microsoft",
-      issueDate: "June 2023",
-      expiryDate: "June 2025",
-      credentialId: "H123-4567",
-      credentialURL: "https://www.credly.com/badges/example",
+      name: "Machine Learning Specialization",
+      organization: "Stanford University",
+      issueDate: "March 2023",
+      // expiryDate: "June 2025",
+      credentialId: "5B50N5K0K7C6",
+      credentialURL:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/5B50N5K0K7C6",
       skills: [
-        "Azure Machine Learning",
-        "Python",
-        "Data Science",
-        "MLOps",
-        "Azure",
+        "Logistic Regression",
+        "Artificial Neural Network (RNN, CNN)",
+        "Linear Regression",
+        "Decision Trees",
+        "Recommender Systems",
       ],
     },
     {
