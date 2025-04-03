@@ -114,7 +114,8 @@ export default function Projects() {
       description: "Cloud-based secure file sharing application",
       content:
         "Developed a cloud-based file-sharing application using React and AWS services to ensure secure file transfer. Leveraged AWS Amplify for user authentication and AWS S3 for encrypted file storage. Features include password-protected sharing, temporary access links, and user-driven encryption.",
-      image: "/assets/images/projects/secure-file-transfer.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/ECC-a9IefwNlaqAueRckdhs5fB2KEOQj4f.png",
       skills: [
         { name: "Cloud Computing" },
         { name: "Web Development" },
@@ -134,7 +135,8 @@ export default function Projects() {
       description: "Advanced techniques for image data analysis",
       content:
         "This project explores dimensionality reduction techniques such as PCA, t-SNE, MDS, and LLE to analyze and visualize image data from a custom dataset of rock-paper-scissors images. It includes clustering using K-Means and Gaussian Mixture Models and training a neural network for image classification.",
-      image: "/assets/images/projects/dimensionality-reduction.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Dim%20Red%20%26%20Class-6a2Ll0cPiFNNJhSG6yKjx2k4T1SBRN.png",
       skills: [
         { name: "Python" },
         { name: "TensorFlow" },
@@ -150,15 +152,17 @@ export default function Projects() {
         { name: "Clustering" },
         { name: "Model Training" },
       ],
-      githubUrl: "https://github.com/MDhopate",
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/3",
+      githubUrl:
+        "https://github.com/MDhopate/Applied-Machine-Learning/tree/main/Dimensionality%20Reduction%20and%20Images%20Classification",
+      // demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/3",
     },
     {
       title: "Image Classification with Pretrained and Custom CNN Models",
       description: "Building effective image classification models",
       content:
         "This project builds an image classification pipeline using a custom dataset of 4 classes (Cacti, Succulents, Trees, Plants). The data was preprocessed, augmented, and split into training, validation, and test sets. Pretrained VGG16 models and custom CNNs were trained to identify the best model.",
-      image: "/assets/images/projects/image-classification.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/img_class-wlJDmBw2aTZQ685ZMdfxNsV5CIbSs1.png",
       skills: [
         { name: "Python" },
         { name: "TensorFlow" },
@@ -172,8 +176,9 @@ export default function Projects() {
         { name: "Visualization" },
         { name: "Performance Evaluation" },
       ],
-      githubUrl: "https://github.com/MDhopate",
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/4",
+      githubUrl:
+        "https://github.com/MDhopate/Applied-Machine-Learning/tree/main/Image%20Classification",
+      // demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/4",
     },
     {
       title: "Text Classification Using Fine-Tuned DistilBERT",
