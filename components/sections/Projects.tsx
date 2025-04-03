@@ -83,8 +83,10 @@ export default function Projects() {
         { name: "GitHub Pages" },
         { name: "Web Hosting" },
       ],
-      githubUrl: "https://github.com/MDhopate",
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/0",
+      githubUrl:
+        "https://github.com/MDhopate/Exploring-NYC-s-Vegetarian-and-Vegan-Options",
+      demoUrl:
+        "https://mdhopate.github.io/Exploring-NYC-s-Vegetarian-and-Vegan-Options/",
     },
     {
       title: "Job Quest - A Solution for Tracking Job Applications",
@@ -103,8 +105,9 @@ export default function Projects() {
         { name: "User Authentication" },
         { name: "Render Hosting" },
       ],
-      githubUrl: "https://github.com/MDhopate",
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/1",
+      githubUrl:
+        "https://github.com/MDhopate/Job-Quest-A-Solution-for-Tracking-Job-Applications",
+      demoUrl: "https://adt-final-project.onrender.com/",
     },
     {
       title: "A Cloud Computing Approach for Secure File Transfer",
@@ -122,8 +125,9 @@ export default function Projects() {
         { name: "Deployment" },
         { name: "Collaborative Development" },
       ],
-      githubUrl: "https://github.com/MDhopate",
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/2",
+      githubUrl:
+        "https://github.com/MDhopate/A-Cloud-Computing-Approach-for-Secure-File-Transfer",
+      // demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/2",
     },
     {
       title: "Dimensionality Reduction and Image Classification",
