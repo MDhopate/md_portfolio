@@ -43,9 +43,22 @@ export default function Projects() {
     [key: number]: boolean;
   }>({});
 
+  // Add this after the expandedSkills state declaration
+  const [expandedDescriptions, setExpandedDescriptions] = useState<{
+    [key: number]: boolean;
+  }>({});
+
   // Toggle expansion of skills section for a particular project
   const toggleSkillsExpansion = (projectIndex: number) => {
     setExpandedSkills((prev) => ({
+      ...prev,
+      [projectIndex]: !prev[projectIndex],
+    }));
+  };
+
+  // Add this function after the toggleSkillsExpansion function
+  const toggleDescriptionExpansion = (projectIndex: number) => {
+    setExpandedDescriptions((prev) => ({
       ...prev,
       [projectIndex]: !prev[projectIndex],
     }));
@@ -59,7 +72,8 @@ export default function Projects() {
         "Interactive dashboard for exploring plant-based dining in NYC",
       content:
         "Developed a web-based dashboard showcasing vegan and vegetarian restaurants in NYC. Collected data via Yelp Fusion API and processed it with Python for analysis and visualization. Designed charts and filters to explore restaurant locations, cuisines, and borough demographics. Hosted on GitHub Pages.",
-      image: "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Data%20Viz-wRm12pjwBvs4nlBPV9A9F0bShAEj0s.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Data%20Viz-wRm12pjwBvs4nlBPV9A9F0bShAEj0s.jpg",
       skills: [
         { name: "Python" },
         { name: "Data Visualization" },
@@ -77,7 +91,8 @@ export default function Projects() {
       description: "Web application for managing job search process",
       content:
         "Developed a web-based app using Flask and SQLite to track and manage job applications. Features include adding/updating job details, visualizations, and resources for interview preparation. Implemented secure user authentication and hosted on Render, overcoming challenges in database integration.",
-      image: "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/ADT-X8pkc5GkXdLmTbzhRmvd5439C6cF1O.png",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/ADT-X8pkc5GkXdLmTbzhRmvd5439C6cF1O.png",
       skills: [
         { name: "Python" },
         { name: "Flask" },
@@ -279,8 +294,33 @@ export default function Projects() {
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="text-slate-300 flex-grow pb-2">
-                  <p className="line-clamp-3">{project.content}</p>
+                {/* Replace the project description CardContent section with this: */}
+                <CardContent className="text-slate-300 flex-grow pb-0">
+                  <div
+                    className={expandedDescriptions[index] ? "" : "relative"}
+                  >
+                    <p
+                      className={
+                        expandedDescriptions[index] ? "" : "line-clamp-3"
+                      }
+                    >
+                      {project.content}
+                    </p>
+                    {!expandedDescriptions[index] &&
+                      project.content.length > 150 && (
+                        <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-slate-800/90 to-transparent"></div>
+                      )}
+                  </div>
+                  {project.content.length > 150 && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="text-indigo-400 hover:text-indigo-300 hover:bg-slate-800/50 mt-1 p-0 h-auto"
+                      onClick={() => toggleDescriptionExpansion(index)}
+                    >
+                      {expandedDescriptions[index] ? "Show Less" : "Learn More"}
+                    </Button>
+                  )}
                 </CardContent>
 
                 {/* Skills section */}
