@@ -41,7 +41,8 @@ export default function Certifications() {
       organization: "Udemy",
       issueDate: "September 2024",
       credentialId: "UC-055a2038-c44b-47a9-8a07-ddd71adc8c3e.pdf",
-      credentialURL: "https://www.credential.net/example",
+      credentialURL:
+        "https://www.udemy.com/certificate/UC-055a2038-c44b-47a9-8a07-ddd71adc8c3e/",
       skills: [
         "VBA Programming",
         "Macro Recording",
@@ -51,34 +52,34 @@ export default function Certifications() {
         "Task Automation",
       ],
     },
-    {
-      name: "AWS Certified Machine Learning - Specialty",
-      organization: "Amazon Web Services",
-      issueDate: "January 2023",
-      expiryDate: "January 2026",
-      credentialId: "AWS-ML-12345",
-      credentialURL: "https://aws.amazon.com/certification/verification",
-      skills: [
-        "AWS SageMaker",
-        "Machine Learning",
-        "Cloud Computing",
-        "Data Engineering",
-        "MLOps",
-      ],
-    },
-    {
-      name: "Tableau Desktop Specialist",
-      organization: "Tableau",
-      issueDate: "November 2022",
-      credentialId: "TDS-2022-11",
-      credentialURL: "https://www.credly.com/badges/example",
-      skills: [
-        "Data Visualization",
-        "Business Intelligence",
-        "Dashboard Design",
-        "Data Analysis",
-      ],
-    },
+    // {
+    //   name: "AWS Certified Machine Learning - Specialty",
+    //   organization: "Amazon Web Services",
+    //   issueDate: "January 2023",
+    //   expiryDate: "January 2026",
+    //   credentialId: "AWS-ML-12345",
+    //   credentialURL: "https://aws.amazon.com/certification/verification",
+    //   skills: [
+    //     "AWS SageMaker",
+    //     "Machine Learning",
+    //     "Cloud Computing",
+    //     "Data Engineering",
+    //     "MLOps",
+    //   ],
+    // },
+    // {
+    //   name: "Tableau Desktop Specialist",
+    //   organization: "Tableau",
+    //   issueDate: "November 2022",
+    //   credentialId: "TDS-2022-11",
+    //   credentialURL: "https://www.credly.com/badges/example",
+    //   skills: [
+    //     "Data Visualization",
+    //     "Business Intelligence",
+    //     "Dashboard Design",
+    //     "Data Analysis",
+    //   ],
+    // },
   ];
 
   return (
