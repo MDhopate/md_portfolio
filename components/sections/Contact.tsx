@@ -158,7 +158,7 @@ export default function Contact() {
                     )
                   }
                 >
-                  <svg
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -176,7 +176,7 @@ export default function Contact() {
                     <path d="M10 6h8v4h-8V6Z" />
                   </svg>
                   Portfolio
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           </AnimatedSection>
