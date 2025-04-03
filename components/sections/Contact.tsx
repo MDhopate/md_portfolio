@@ -148,7 +148,7 @@ export default function Contact() {
                   <Github className="mr-2 text-indigo-400" />
                   GitHub
                 </Button>
-                <Button
+                {/* <Button
                   variant="outline"
                   className="w-full justify-start border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/10"
                   onClick={() =>
@@ -176,7 +176,7 @@ export default function Contact() {
                     <path d="M10 6h8v4h-8V6Z" />
                   </svg>
                   Portfolio
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           </AnimatedSection>
