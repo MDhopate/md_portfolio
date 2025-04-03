@@ -185,7 +185,8 @@ export default function Projects() {
       description: "NLP model for binary text classification",
       content:
         "This project fine-tunes DistilBERT for binary text classification using a custom dataset of Tech and Sports text. It involves data preprocessing, tokenization, and hyperparameter tuning. Insights - overfitting challenges and emphasize the need for diverse training data to improve generalization.",
-      image: "/assets/images/projects/text-classification.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Text%20Processing-z0EOuOgnBdbGbzPXFSWBWIXj8bB2We.png",
       skills: [
         { name: "Python" },
         { name: "Transformers" },
@@ -198,8 +199,9 @@ export default function Projects() {
         { name: "Visualization" },
         { name: "Overfitting Mitigation" },
       ],
-      githubUrl: "https://github.com/MDhopate",
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/5",
+      githubUrl:
+        "https://github.com/MDhopate/Applied-Machine-Learning/tree/main/Text%20Classification",
+      // demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/5",
     },
     {
       title: "Mapping Malnutrition Data – Tableau Dashboard",
