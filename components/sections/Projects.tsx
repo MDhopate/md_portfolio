@@ -208,21 +208,24 @@ export default function Projects() {
       description: "Interactive visualization of global malnutrition metrics",
       content:
         "This interactive dashboard visualizes malnutrition metrics across regions, showcasing prevalence, trends, and key indicators. With geospatial analysis and interactive filters, it empowers users to identify priority areas for intervention through clear and actionable insights.",
-      image: "/assets/images/projects/malnutrition-dashboard.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Malnutrition-VCna6uFPkYHoFYROle9pCBF2fiCafn.png",
       skills: [
         { name: "Tableau" },
         { name: "Data Visualization" },
         { name: "Data Analysis" },
         { name: "Insight Generation" },
       ],
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/6",
+      demoUrl:
+        "https://public.tableau.com/app/profile/malhar.dhopate/viz/CaseStudy3MappingMalnutritionData/Dashboard1",
     },
     {
       title: "Michelin Restaurants and Japan's Culinary Map",
       description: "Visualization of global Michelin-starred restaurants",
       content:
         "This Tableau dashboard offers a global overview of Michelin-starred restaurants, with a focused visualization of Japan's culinary excellence. It includes a Culinary Map of regional specialties and a Subway Map connecting culinary hubs, providing an interactive way to explore Michelin-starred dining.",
-      image: "/assets/images/projects/michelin-restaurants.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Japan-vjZkMCDasHuI366iVZpFKS8asDNAO4.png",
       skills: [
         { name: "Tableau" },
         { name: "Data Visualization" },
@@ -231,14 +234,16 @@ export default function Projects() {
         { name: "Data Storytelling" },
         { name: "Culinary Data Analysis" },
       ],
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/7",
+      demoUrl:
+        "https://public.tableau.com/app/profile/malhar.dhopate/viz/Lab7_16123860027590/Dashboard2",
     },
     {
       title: "University Donor Contributions Dashboard",
       description: "Analysis of university fundraising performance",
       content:
         "This Tableau dashboard analyzes university donor contributions, focusing on metrics like - pledge amounts by degree, top donors, fund types, and faculty-specific KPIs. It highlights trends and insights into donor behavior and fund allocation, offering a comprehensive view of fundraising performance.",
-      image: "/assets/images/projects/donor-dashboard.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Doner-rDi9HmL28cOEI6UsFJURQZYHtNxHlY.png",
       skills: [
         { name: "Tableau" },
         { name: "Data Visualization" },
@@ -247,14 +252,16 @@ export default function Projects() {
         { name: "Insight Generation" },
         { name: "Fundraising Analytics" },
       ],
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/8",
+      demoUrl:
+        "https://public.tableau.com/app/profile/malhar.dhopate/viz/Lab12_16134885072340/Dashboard4",
     },
     {
       title: "Top Media Consumption Dashboard",
       description: "Analysis of media consumption patterns and preferences",
       content:
         "This Tableau dashboard analyzes media consumption patterns, highlighting top artists, genres, and albums based on hours spent. It provides a detailed breakdown of preferences across music, TV shows, and genres, offering insights into audience behavior and trends.",
-      image: "/assets/images/projects/media-dashboard.jpg",
+      image:
+        "https://wrjsdmdf7btr7q6u.public.blob.vercel-storage.com/Music-Mb0rYqyi6KCposi16qDqnlqmcTFEut.png",
       skills: [
         { name: "Tableau" },
         { name: "Data Visualization" },
@@ -263,7 +270,8 @@ export default function Projects() {
         { name: "Insight Generation" },
         { name: "Audience Behavior Analysis" },
       ],
-      demoUrl: "https://www.datascienceportfol.io/dhopatemalhar/projects/9",
+      demoUrl:
+        "https://public.tableau.com/app/profile/malhar.dhopate/viz/CaseStudy6_16136755146580/Dashboard6",
     },
   ];
 
