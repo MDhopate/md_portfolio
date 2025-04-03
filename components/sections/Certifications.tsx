@@ -40,7 +40,7 @@ export default function Certifications() {
       name: "Unlock Excel VBA and Excel Macros",
       organization: "Udemy",
       issueDate: "September 2024",
-      credentialId: "UC-055a2038-c44b-47a9-8a07-ddd71adc8c3e.pdf",
+      credentialId: "UC-055a2038-c44b-47a9-8a07-ddd71adc8c3e",
       credentialURL:
         "https://www.udemy.com/certificate/UC-055a2038-c44b-47a9-8a07-ddd71adc8c3e/",
       skills: [
