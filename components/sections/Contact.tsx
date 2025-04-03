@@ -95,7 +95,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-400">Location</p>
-                    <p className="text-slate-200">Bloomington, IN, USA</p>
+                    <p className="text-slate-200">Boca Raton, FL, USA</p>
                   </div>
                 </div>
               </CardContent>
