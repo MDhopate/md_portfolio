@@ -29,19 +29,15 @@ export default function Certifications() {
       credentialURL:
         "https://cp.certmetrics.com/amazon/en/public/verify/credential/79d76ef9f4184be3b5f7822e237a5fed",
       skills: [
-        "Data Engineering (S3, Glue, Lake Formation)",
+        "Data Engineering",
         "Feature Engineering & Preprocessing",
-        "Model Training with SageMaker",
         "Hyperparameter Tuning (Automatic & Manual)",
         "Deep Learning (TensorFlow, PyTorch, MXNet)",
-        "MLOps with SageMaker Pipelines",
+        "MLOps with SageMaker",
         "Real-time & Batch Inference",
-        "Model Monitoring & Drift Detection",
-        "NLP (AWS Comprehend, Hugging Face)",
-        "Computer Vision (AWS Rekognition, CNNs)",
+        "NLP",
         "Forecasting & Anomaly Detection",
         "Recommendation Systems",
-        "Security & Governance (IAM, Clarify, CloudWatch)",
       ],
     },
     {
