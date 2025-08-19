@@ -21,6 +21,30 @@ export default function Certifications() {
   // Certification data
   const certifications: CertificationItem[] = [
     {
+      name: "AWS Certified Machine Learning Engineer - Associate",
+      organization: "Stanford University",
+      issueDate: "May 2023",
+      // expiryDate: "June 2025",
+      credentialId: "79d76ef9f4184be3b5f7822e237a5fed",
+      credentialURL:
+        "https://cp.certmetrics.com/amazon/en/public/verify/credential/79d76ef9f4184be3b5f7822e237a5fed",
+      skills: [
+        "Data Engineering (S3, Glue, Lake Formation)",
+        "Feature Engineering & Preprocessing",
+        "Model Training with SageMaker",
+        "Hyperparameter Tuning (Automatic & Manual)",
+        "Deep Learning (TensorFlow, PyTorch, MXNet)",
+        "MLOps with SageMaker Pipelines",
+        "Real-time & Batch Inference",
+        "Model Monitoring & Drift Detection",
+        "NLP (AWS Comprehend, Hugging Face)",
+        "Computer Vision (AWS Rekognition, CNNs)",
+        "Forecasting & Anomaly Detection",
+        "Recommendation Systems",
+        "Security & Governance (IAM, Clarify, CloudWatch)",
+      ],
+    },
+    {
       name: "Machine Learning Specialization",
       organization: "Stanford University",
       issueDate: "March 2023",
