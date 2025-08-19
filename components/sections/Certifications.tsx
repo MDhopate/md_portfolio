@@ -36,7 +36,6 @@ export default function Certifications() {
         "MLOps with SageMaker",
         "Real-time & Batch Inference",
         "NLP",
-        "Forecasting & Anomaly Detection",
       ],
     },
     {
