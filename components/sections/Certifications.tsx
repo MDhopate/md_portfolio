@@ -30,14 +30,13 @@ export default function Certifications() {
         "https://cp.certmetrics.com/amazon/en/public/verify/credential/79d76ef9f4184be3b5f7822e237a5fed",
       skills: [
         "Data Engineering",
-        "Feature Engineering & Preprocessing",
-        "Hyperparameter Tuning (Automatic & Manual)",
+        "Feature Engineering",
+        "Hyperparameter Tuning",
         "Deep Learning (TensorFlow, PyTorch, MXNet)",
         "MLOps with SageMaker",
         "Real-time & Batch Inference",
         "NLP",
         "Forecasting & Anomaly Detection",
-        "Recommendation Systems",
       ],
     },
     {
