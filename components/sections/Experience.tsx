@@ -18,13 +18,29 @@ export default function Experience() {
   // Experience data
   const experiences: ExperienceItem[] = [
     {
-      title: "Graduate Research Assistant",
-      company: "Indiana University",
+      title: "Finance Intern - Process Automation",
+      company: "Hoerbiger Service Inc.",
+      location: "Deerfield Beach, FL",
+      period: "May 2025",
+      technologies: ["SAP", "Celonis", "Power Automate", "Microsoft Suite"],
+      responsibilities: [
+        "Automated financial reports for the Controller, reducing preparation time by extbf{85%} & improving forecast accuracy.",
+        "Built Advanced Macros & Power Automate workflows to eliminate manual data consolidation, saving 30+ hrs weekly for the finance team.",
+        "Leveraged process mining to analyze SAP workflows, identify inefficiencies, & recommend changes increasing reporting speed by 35%.",
+        "Partnered with finance leadership to enhance budget tracking, enabling faster & more informed strategic decisions.",
+      ],
+    },
+    {
+      title: "Gen AI/NLP Research Assistant",
+      company: "IU College of Arts & Sciences",
       location: "Bloomington, IN",
-      period: "May 2024 - Present",
+      period: "May 2024 - April 2025",
       technologies: [
+        "LangChain",
+        "ChromaDB",
         "Python",
-        "GPT-4",
+        "SQLite",
+        "RAG",
         "Speech Recognition",
         "Speech-To-Text",
         "Text-To-Speech",
@@ -32,15 +48,17 @@ export default function Experience() {
         "SQLite",
       ],
       responsibilities: [
-        'Collaborated on the development of "Carry," a conversational AI powered by GPT-4, speech recognition, and text-to-speech technologies.',
-        "Embedded interview transcripts in Pinecone and SQLite to enable fast, context-aware conversation retrieval.",
-        "Contributed to the design of a modular architecture, reducing system latency by 20% and improving response accuracy by 30%.",
-        "Addressed input variability challenges through similarity search and adaptive context models, enhancing speech recognition performance by 15%.",
-        "The project was showcased in art galleries across Bloomington, IN, and North Carolina, highlighting the fusion of technology and art through interactive, AI-driven exhibits.",
+        "Developed & deployed an end-to-end NLP pipeline using Pinecone,  & VAD for real-time conversations.",
+
+        "Set up a Retrieval-Augmented Generation (RAG) system with speech input, vector search & response generation.",
+
+        "Designed consent-aware architecture using SQLite for ethical model training on community-driven narratives.",
+
+        "Analyzed 150+ user interactions to optimize model prompts & reduce idle session errors by 80%.",
       ],
     },
     {
-      title: "Billing Analyst",
+      title: "Data Analyst",
       company: "Nationwide Automotive Services",
       location: "Boca Raton, FL",
       period: "Aug 2021 - Apr 2023",
