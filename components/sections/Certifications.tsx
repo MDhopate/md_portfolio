@@ -22,8 +22,8 @@ export default function Certifications() {
   const certifications: CertificationItem[] = [
     {
       name: "AWS Certified Machine Learning Engineer - Associate",
-      organization: "Stanford University",
-      issueDate: "May 2023",
+      organization: "Amazon Web Services",
+      issueDate: "May 2025",
       // expiryDate: "June 2025",
       credentialId: "79d76ef9f4184be3b5f7822e237a5fed",
       credentialURL:
